@@ -1,0 +1,142 @@
+:root {
+  --primary: #eb96b2;
+  --secondary: #60527c;
+  --light: #EEE;
+  --light-alt: #61759b;
+  --dark: #131A26;
+  --dark-alt: #202B3E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--dark-alt);
+  color: var(--light);
+}
+
+.App {
+  padding: 32px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.todo {
+  position: relative;
+  background-color: var(--dark);
+  padding: 16px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-bottom: 1rem;
+
+}
+
+.todo:hover {
+  opacity: 0.8;
+}
+
+.todo .checkbox {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  background-color: var(--dark-alt);
+  transition: 0.4s;
+}
+
+.todo.completed .checkbox {
+  background-color: var(--primary);
+  background-image: linear-gradient(to bottom, var(--primary), var(--secondary));
+}
+
+.todo .text {
+  font-size: 20px;
+}
+
+.todo.completed .text {
+  text-decoration: line-through;
+}
+
+.todo .delete-todo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  color: var(--light);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #AF1E2D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.todo.add {
+  width: 6rem;
+  display: flex;
+
+}
+
+.add:hover {
+  background-color: green;
+}
+
+.addtask {
+  color: black;
+  position: fixed;
+  top: 50%;
+  left: 35%;
+  background-color: rgb(235, 223, 223);
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+
+  padding: 2rem;
+  box-shadow: 0px 4px 32px var(--dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.close {
+  cursor: pointer;
+  width: 1rem;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+textarea {
+  margin: 2rem;
+  font-size: larger;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 16px;
+  box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+button {
+  background-color: green;
+  padding: 5px;
+  border-radius: 10px;
+}
