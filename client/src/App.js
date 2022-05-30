@@ -10,7 +10,6 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [active, setActive] = useState(false);
   const [newtask, setNewtask] = useState("")
-  console.log(todos)
   useEffect(() => {
     fetch(url_base + '/todo')
       .then(res => res.json())
